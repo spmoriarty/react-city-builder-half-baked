@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CastleDropdown({ setCastle, castle }) {
+export default function CastleDropdown({ setCastle }) {
   return (
     <>
       Select a Castle
@@ -14,7 +14,7 @@ export default function CastleDropdown({ setCastle, castle }) {
   
       </select>
       
-      <img src={`castle-${castle}.jpeg`} />
+      {/* <img src={`castle-${castle}.jpeg`} /> */}
     </>
   );
 }
