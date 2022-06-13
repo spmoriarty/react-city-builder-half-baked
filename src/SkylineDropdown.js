@@ -12,7 +12,7 @@ export default function SkylineDropdown({ setSkyline, skyline }) {
         <option value='2'>Busy</option>
         <option value='3'>Foggy</option>
       </select>
-      <img src={`skyLine-${skyline.value}.jpeg`} />
+      <img src={`skyLine-${skyline}.jpeg`} />
     </div>
   );
 }

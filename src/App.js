@@ -10,7 +10,7 @@ import City from './City';
 
 function App() {
   // track some state here.
-  const [skyline, setSkyline] = useState('');
+  const [skyline, setSkyline] = useState(1);
   const [waterfront, setWaterfront] = useState('');
   const [castle, setCastle] = useState(1);
   const [sloganList, setSloganList] = useState(['Keep Portland Weird']);
@@ -39,7 +39,8 @@ function App() {
         <section className='dropdowns'>
           <div>
             
-            < SkylineDropdown />
+            < CastleDropdown castle={castle} setCastle={setCastle}/>
+            < SkylineDropdown skyline={skyline} setSkyline={setSkyline} />
             {/* <img src={`waterfront-${waterfront.value}.png`} />
             <img src={`skyline-${skyline.value}.png`} /> */}
           </div>
@@ -48,7 +49,6 @@ function App() {
             <select onChange={(e) => setWaterfront(e.target.value)}></select>
             
           </div>
-          < CastleDropdown castle={castle} setCastle={setCastle}/>
           
           {/* 
           render all three Dropdown components (WaterfrontDropdown, SkylineDropdown, CastleDropdown) here. 
