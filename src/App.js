@@ -14,9 +14,9 @@ function App() {
   const [waterfront, setWaterfront] = useState('');
   const [castle, setCastle] = useState('');
   const [sloganList, setSloganList] = useState(['Keep Portland Weird']);
-  const [sloganForm,setSloganForm] = useState('');
+  const [sloganForm, setSloganForm] = useState('');
   const [cityNameInput, setCityNameInput] = useState('Portland');
-  const [ city, setCity] = useState('');
+  const [city, setCity] = useState('');
 
   // You'll need to keep track of a skylineId, waterfrontId, and castleId. All these start out as 1
   
@@ -29,14 +29,30 @@ function App() {
       {/* here, the City component takes in skylineId, waterfrontId, castleId as props. It'll use those ids to render pictures correctly. */}
       <h1>
         {/* dynamically update the city name here using state */}
-        Welcome to beautiful Portland!
+        <div>Welcome to {cityNameInput}</div>
       </h1>
       <div className='bottom'>
         {/* here, the CityNameInput component takes in the setCityName state handler function */}
+        <section>
+        
+        </section>
         <section className='dropdowns'>
+          <div>
+            <img src={`${castle}.png`} />
+            <img src={`${waterfront}.png`} />
+            <img src={`${skyline}.png`} />
+          </div>
+          <div>
+            <select onChange={(e) => setSkyline(e.target.value)}></select>
+            <select onChange={(e) => setWaterfront(e.target.value)}></select>
+            <select onChange={(e) => setCastle(e.target.value)}></select>
+            
+
+            
+          </div>
           {/* 
           render all three Dropdown components (WaterfrontDropdown, SkylineDropdown, CastleDropdown) here. 
-          
+        
           In each Dropdown, pass as props the state handler functions defined above, so that these child components can manipulate parent state 
           */}
         </section>
