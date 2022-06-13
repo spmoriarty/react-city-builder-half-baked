@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CityNameInput(props) {
+export default function CityNameInput({ setCityName }) {
   return (
     <section>
       What is your city name?

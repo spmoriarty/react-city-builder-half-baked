@@ -34,7 +34,7 @@ function App() {
       <div className='bottom'>
         {/* here, the CityNameInput component takes in the setCityName state handler function */}
         <section>
-        
+        < CityNameInput cityNameInput={cityNameInput} setCityName={setCityNameInput}/> 
         </section>
         <section className='dropdowns'>
           <div>
@@ -42,8 +42,6 @@ function App() {
           
           </div>
           <div>
-        
-            <select onChange={(e) => setWaterfront(e.target.value)}></select>
             
           </div>
           
