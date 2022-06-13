@@ -38,7 +38,8 @@ function App() {
         </section>
         <section className='dropdowns'>
           <div>
-            
+            < CastleDropdown />
+            < SkylineDropdown />
             <img src={`waterfront-${waterfront.value}.png`} />
             <img src={`skyline-${skyline.value}.png`} />
           </div>
