@@ -38,16 +38,13 @@ function App() {
         </section>
         <section className='dropdowns'>
           <div>
-            <img src={`${castle}.png`} />
-            <img src={`${waterfront}.png`} />
-            <img src={`${skyline}.png`} />
+            
+            <img src={`waterfront-${waterfront.value}.png`} />
+            <img src={`skyline-${skyline.value}.png`} />
           </div>
           <div>
             <select onChange={(e) => setSkyline(e.target.value)}></select>
             <select onChange={(e) => setWaterfront(e.target.value)}></select>
-            <select onChange={(e) => setCastle(e.target.value)}></select>
-            
-
             
           </div>
           {/* 
