@@ -15,7 +15,7 @@ function App() {
   const [castle, setCastle] = useState(1);
   const [sloganList, setSloganList] = useState(['Keep Portland Weird']);
   const [sloganForm, setSloganForm] = useState('');
-  const [cityNameInput, setCityNameInput] = useState('Portland');
+  const [cityNameInput, setCityNameInput] = useState('');
   const [city, setCity] = useState('');
 
   // You'll need to keep track of a skylineId, waterfrontId, and castleId. All these start out as 1
@@ -34,7 +34,7 @@ function App() {
       <div className='bottom'>
         {/* here, the CityNameInput component takes in the setCityName state handler function */}
         <section>
-        < CityNameInput cityNameInput={cityNameInput} setCityName={setCityNameInput}/> 
+          < CityNameInput cityNameInput={cityNameInput} setCityName={setCityNameInput}/> 
         </section>
         <section className='dropdowns'>
           <div>
