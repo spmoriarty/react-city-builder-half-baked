@@ -13,10 +13,11 @@ function App() {
   const [skyline, setSkyline] = useState(1);
   const [waterfront, setWaterfront] = useState(1);
   const [castle, setCastle] = useState(1);
-  const [sloganList, setSloganList] = useState(['']);
-  const [sloganForm, setSloganForm] = useState([]);
+  const [sloganList, setSloganList] = useState([]);
+  // const [sloganForm, setSloganForm] = useState('');
   const [cityNameInput, setCityNameInput] = useState('');
   const [city, setCity] = useState('');
+  console.log(sloganList);
 
   // You'll need to keep track of a skylineId, waterfrontId, and castleId. All these start out as 1
   
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <div className="App">
+      <City city={city} castleId={castle} waterfrontId={waterfront} skylineId={skyline} />
       {/* here, the City component takes in skylineId, waterfrontId, castleId as props. It'll use those ids to render pictures correctly. */}
       <h1>
         {/* dynamically update the city name here using state */}
@@ -34,7 +36,7 @@ function App() {
       <div className='bottom'>
         {/* here, the CityNameInput component takes in the setCityName state handler function */}
         <section>
-          < CityNameInput cityNameInput={cityNameInput} setCityName={setCityNameInput}/> 
+          < CityNameInput cityNameInput={cityNameInput} setCityName={setCityNameInput} setCity={setCity}/> 
         </section>
         <section className='dropdowns'>
           <div>
@@ -44,9 +46,9 @@ function App() {
           </div>
   
         </section>
-        <SloganForm setSloganForm={setSloganForm} sloganForm={sloganForm} />
+        <SloganForm setSloganList={setSloganList} sloganList={sloganList}/>
         {/* here, the SloganForm component takes in the setSlogans state handler function and the slogans array that live in state */}
-        <SloganList sloganList={sloganList} setSloganList={setSloganList} />
+        <SloganList sloganList={sloganList} />
         {/* here, the SloganList component takes the array of slogans that lives in state */}
 
       </div>

@@ -1,13 +1,17 @@
-import Slogan from './Slogan';
+// import Slogan from './Slogan';
+import { useState } from 'react';
 
-export default function SloganForm({ setSloganForm }) {
+
+export default function SloganForm({ setSloganList, sloganList }) {
   // React forms are a pain! 
   // Track the sloganInput form state with a useState hook
-    
+  const [sloganInput, setSloganInput] = useState('');
+  console.log(sloganInput);
+  console.log(sloganList);
   function handleSubmit(e) {
     e.preventDefault();
-    Slogan.push(SloganForm);
-    setSloganForm(SloganForm.slice());
+    
+    setSloganList([...sloganList, sloganInput]);
 
     // This component takes in a prop called setSlogans, which is a function that takes in an array of slogans. 
     // Also, this component also takes in a prop called slogans, which is an arry of strings. //// On submit call the setSlogans state with a new array that is a copy of the old array with the new slogan immutably added to the end 
@@ -22,7 +26,7 @@ export default function SloganForm({ setSloganForm }) {
         Add a slogan to the list!
         {/* on change, set the sloganInput in state to be the input value */}
         {/* also, weirdly, set the value of this input to the sloganInput tracked in state to make this a 'controlled' form input */}
-        <input onChange={e => setSloganForm(e.target.value) } />
+        <input onChange={e => setSloganInput(e.target.value) } />
         <button>Submit</button>
       </form>
     </section>

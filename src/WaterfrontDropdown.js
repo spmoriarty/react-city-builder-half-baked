@@ -12,7 +12,7 @@ export default function WaterfrontDropdown({ setWaterfront, waterfront }) {
         <option value='2'>Sunset</option>
         <option value='3'>Boats</option>
       </select>
-      <img src={`waterfront-${waterfront}.jpeg`}/>
+      {/* <img src={`waterfront-${waterfront}.jpeg`}/> */}
     </div>
   );
 }
