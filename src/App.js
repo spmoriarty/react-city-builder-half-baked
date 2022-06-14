@@ -17,7 +17,7 @@ function App() {
   // const [sloganForm, setSloganForm] = useState('');
   const [cityNameInput, setCityNameInput] = useState('');
   const [city, setCity] = useState('');
-  console.log(sloganList);
+  
 
   // You'll need to keep track of a skylineId, waterfrontId, and castleId. All these start out as 1
   
