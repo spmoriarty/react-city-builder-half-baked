@@ -6,8 +6,7 @@ export default function SloganForm({ setSloganList, sloganList }) {
   // React forms are a pain! 
   // Track the sloganInput form state with a useState hook
   const [sloganInput, setSloganInput] = useState('');
-  console.log(sloganInput);
-  console.log(sloganList);
+  
   function handleSubmit(e) {
     e.preventDefault();
     

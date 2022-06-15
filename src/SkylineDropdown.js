@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function SkylineDropdown({ setSkyline, skyline }) {
+export default function SkylineDropdown({ setSkyline }) {
   return (
     <div>
       Select a Skyline
